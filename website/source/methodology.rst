@@ -150,8 +150,6 @@ External flash memories are dedicated electronic chips used to store information
   * Parallel flash memory (Easy Flash or similar)
   * eMMC (Interface similar to SD/MMC card but soldered on the PCB in a BGA package)
 
-Again, the *HFDB* provides a comprehensive guide to extract information from these chips.
-
 
 III.3. Extracting data from classic storage medias
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

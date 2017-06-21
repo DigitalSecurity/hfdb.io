@@ -1,0 +1,33 @@
+=============
+Vachette ENTR
+=============
+
+.. image:: ../images/devices/vachette_entr/entr.jpg
+    :scale: 50
+    :align: center
+    :alt: Vachette ENTR
+
+
+----------------
+Forensic Summary
+----------------
+
++-----------------+----------------------------------+------------------------------+
+| Category        | Feature                          | Present                      |
++=================+==================================+==============================+
+| Data collection | Console/Shell                    | No                           |
+|                 +----------------------------------+------------------------------+
+|                 | Extractible data from memory     | No                           |
++-----------------+----------------------------------+------------------------------+
+| Traceability /  | Real-Time Clock (RTC)            | No                           |
+| Accountability  +----------------------------------+------------------------------+
+|                 | System log(s)                    | No                           |
+|                 +----------------------------------+------------------------------+
+|                 | Event log(s)                     | No                           |
++-----------------+----------------------------------+------------------------------+
+| Power management| Visual indicator                 | No                          |
+|                 +----------------------------------+------------------------------+
+|                 | Can be easily powered off        | No                           |
++-----------------+----------------------------------+------------------------------+
+
+.. note:: At this moment, we did not find a way to extract valuable information from the Vachette ENTR smartlock.

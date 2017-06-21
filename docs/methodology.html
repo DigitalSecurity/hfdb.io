@@ -103,6 +103,12 @@
 <li class="toctree-l4"><a class="reference internal" href="#ii-3-exploiting-a-vulnerability-to-gain-access">II.3. Exploiting a vulnerability to gain access</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#iii-create-bit-stream-copies-of-storage-medias">III. Create bit-stream copies of storage medias</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#iii-1-extracting-data-from-internal-flash">III.1. Extracting data from internal flash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iii-2-extracting-data-from-external-flash">III.2. Extracting data from external flash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iii-3-extracting-data-from-classic-storage-medias">III.3. Extracting data from classic storage medias</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -281,7 +287,53 @@ Therefore, the forensic investigator needs to reverse-engineer these proprietary
 <h4>II.3. Exploiting a vulnerability to gain access<a class="headerlink" href="#ii-3-exploiting-a-vulnerability-to-gain-access" title="Permalink to this headline">¶</a></h4>
 <p>In case the device features are not directly available, the forensic investigator may exploit a known vulnerability to get access to the device. This is particularly
 true for devices using embedded operating systems (Linux-based mostly).</p>
-<p>HFDB list of supported devices may provide some known vulnerability that may be exploited, along with working exploits.</p>
+<p>HFDB <a class="reference internal" href="devices.html"><span class="doc">list of supported devices</span></a> may provide some known vulnerability that may be exploited, along with working exploits.</p>
+</div>
+</div>
+<div class="section" id="iii-create-bit-stream-copies-of-storage-medias">
+<h3>III. Create bit-stream copies of storage medias<a class="headerlink" href="#iii-create-bit-stream-copies-of-storage-medias" title="Permalink to this headline">¶</a></h3>
+<p>In order to preserve evidences, the forensic investigator needs to create an exact duplicata of data stored in every storage media, by doing
+bit-stream copies of their contents.</p>
+<p>Usually, the forensic investigator has to handle three categories of storage medias:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Internal electronic memories: Internal NAND Flash of a given SoC or MCU</li>
+<li>Electronic storage chips: NAND Flash, NOR Flash</li>
+<li>classic storage medias such as SD/MMC/CF cards</li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This operation has to be performed on a powered off device, so make sure to cut the power if the device was found in an powered on state.</p>
+</div>
+<div class="section" id="iii-1-extracting-data-from-internal-flash">
+<h4>III.1. Extracting data from internal flash<a class="headerlink" href="#iii-1-extracting-data-from-internal-flash" title="Permalink to this headline">¶</a></h4>
+<p>Internal flash memory is not directly accessible from a System-on-Chip as this latter provides an interface to access its own CPU
+and acts as a relay to its internal flash memory. This behavior allows the SoC to protect its flash against firmware extraction, by enforcing
+access rules based on fuse settings.</p>
+<p>The forensic investigator has to determine the SoC or MCU reference (vendor, type of SoC or MCU, package) and search the <em>HFDB</em> about its flash memory capacity and how to extract it.</p>
+<p>The <em>HFDB</em> provides a <a class="reference internal" href="cpumcu.html"><span class="doc">comprehensive forensic summary of many SoCs and MCUs</span></a>, detailing the methodology to dump each chip’s internal flash memory when
+it is possible.</p>
+</div>
+<div class="section" id="iii-2-extracting-data-from-external-flash">
+<h4>III.2. Extracting data from external flash<a class="headerlink" href="#iii-2-extracting-data-from-external-flash" title="Permalink to this headline">¶</a></h4>
+<p>External flash memories are dedicated electronic chips used to store information. There are different well-known types of chips with different packages:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Serial NAND flash memory (SPI compatible)</li>
+<li>Parallel flash memory (Easy Flash or similar)</li>
+<li>eMMC (Interface similar to SD/MMC card but soldered on the PCB in a BGA package)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="iii-3-extracting-data-from-classic-storage-medias">
+<h4>III.3. Extracting data from classic storage medias<a class="headerlink" href="#iii-3-extracting-data-from-classic-storage-medias" title="Permalink to this headline">¶</a></h4>
+<p>In case of SD/MMC cards, the extraction process is well-known and simple:</p>
+<ol class="arabic simple">
+<li>Use a compatible write-blocker or enable software-level write protection</li>
+<li>Use a forensic tool like <em>dcfldd</em> to create a bit-stream image of the card along with SHA256 and MD5 hashes</li>
+<li>Check the hashes against the original device to ensure integrity.</li>
+</ol>
 </div>
 </div>
 </div>

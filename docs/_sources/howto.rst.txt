@@ -24,5 +24,5 @@ The search box at the top-left corner of this website is a good way to quickly f
 Specific Forensic Tools
 -----------------------
 
-We also develop specific tools required to automate collection and extraction for some specific devices or file format, these tools
+We also develop `specific tools <https://github.com/digitalsecurity/hfdb.io/tools/>`_ required to automate collection and extraction for some specific devices or file format, these tools
 are part of this project and available in our Github repository. They are usually referenced in methodologies and may be found very quickly.
