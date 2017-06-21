@@ -111,4 +111,53 @@ II.3. Exploiting a vulnerability to gain access
 In case the device features are not directly available, the forensic investigator may exploit a known vulnerability to get access to the device. This is particularly
 true for devices using embedded operating systems (Linux-based mostly).
 
-HFDB list of supported devices may provide some known vulnerability that may be exploited, along with working exploits.
+HFDB :doc:`list of supported devices <devices>` may provide some known vulnerability that may be exploited, along with working exploits.
+
+
+III. Create bit-stream copies of storage medias
+-----------------------------------------------
+
+In order to preserve evidences, the forensic investigator needs to create an exact duplicata of data stored in every storage media, by doing
+bit-stream copies of their contents.
+
+Usually, the forensic investigator has to handle three categories of storage medias:
+
+  * Internal electronic memories: Internal NAND Flash of a given SoC or MCU
+  * Electronic storage chips: NAND Flash, NOR Flash
+  * classic storage medias such as SD/MMC/CF cards
+
+.. note:: This operation has to be performed on a powered off device, so make sure to cut the power if the device was found in an powered on state.
+
+III.1. Extracting data from internal flash
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Internal flash memory is not directly accessible from a System-on-Chip as this latter provides an interface to access its own CPU
+and acts as a relay to its internal flash memory. This behavior allows the SoC to protect its flash against firmware extraction, by enforcing
+access rules based on fuse settings.
+
+The forensic investigator has to determine the SoC or MCU reference (vendor, type of SoC or MCU, package) and search the *HFDB* about its flash memory capacity and how to extract it.
+
+The *HFDB* provides a :doc:`comprehensive forensic summary of many SoCs and MCUs <cpumcu>`, detailing the methodology to dump each chip's internal flash memory when
+it is possible.
+
+
+III.2. Extracting data from external flash
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+External flash memories are dedicated electronic chips used to store information. There are different well-known types of chips with different packages:
+
+  * Serial NAND flash memory (SPI compatible)
+  * Parallel flash memory (Easy Flash or similar)
+  * eMMC (Interface similar to SD/MMC card but soldered on the PCB in a BGA package)
+
+Again, the *HFDB* provides a comprehensive guide to extract information from these chips.
+
+
+III.3. Extracting data from classic storage medias
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In case of SD/MMC cards, the extraction process is well-known and simple:
+
+1. Use a compatible write-blocker or enable software-level write protection
+2. Use a forensic tool like *dcfldd* to create a bit-stream image of the card along with SHA256 and MD5 hashes
+3. Check the hashes against the original device to ensure integrity.
