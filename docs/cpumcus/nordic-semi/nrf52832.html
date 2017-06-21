@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Nordic Semiconductor NRF52832 SoC &mdash; Hardware Forensic Database 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Hardware Forensic Database 1.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Nordic Semiconductor SoCs" href="../nordic-semi.html"/>
+        <link rel="next" title="Texas Instruments SoCs" href="../ti.html"/>
+        <link rel="prev" title="Nordic Semiconductor NRF51822 SoC" href="nrf51822.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../howto.html">How to use the HFDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../methodology.html">IoT-related forensic methodology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../toolbox.html">Forensic toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices.html">List of supported devices</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../cpumcu.html">List of supported MCUs/CPUs</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../cpumcu.html#forensic-summaries">Forensic summaries</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../atmel.html">Atmel</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../nordic-semi.html">Nordic Semiconductor</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="nrf51822.html">nRF51822</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">nRF52832</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ti.html">Texas Instruments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Hardware Forensic Database</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../cpumcu.html">List of supported MCUs / CPUs</a> &raquo;</li>
+        
+          <li><a href="../nordic-semi.html">Nordic Semiconductor SoCs</a> &raquo;</li>
+        
+      <li>Nordic Semiconductor NRF52832 SoC</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/cpumcus/nordic-semi/nrf52832.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nordic-semiconductor-nrf52832-soc">
+<h1>Nordic Semiconductor NRF52832 SoC<a class="headerlink" href="#nordic-semiconductor-nrf52832-soc" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="50%" />
+<col width="21%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Category</th>
+<th class="head">Feature</th>
+<th class="head">Present</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="3">Debugging</td>
+<td>JTAG port</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td>SWD port</td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td>Custom debug port</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td rowspan="2">Protections</td>
+<td>Read-out protection</td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td>Known bypass</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<p>The nRF52832 is a SoC able to communicate over many protocols:</p>
+<blockquote>
+<div><ul class="simple">
+<li>ShockBurst (legacy)</li>
+<li>Enhanced ShockBurst (250kbps, 1Mbps &amp; 2Mbps)</li>
+<li>Bluetooth Low Energy</li>
+</ul>
+</div></blockquote>
+<p>It also includes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>internal Flash (128k or 256k)</li>
+<li>Real Time Counter (RTC)</li>
+<li>AES hardware encryption</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="firmware-extraction">
+<h2>Firmware extraction<a class="headerlink" href="#firmware-extraction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="extract-firmware-through-swd">
+<h3>Extract firmware through SWD<a class="headerlink" href="#extract-firmware-through-swd" title="Permalink to this headline">¶</a></h3>
+<p>One of the simpliest way to extract the firmware from a nRF52832 is to connect to the SWD debug interface (if enabled), and try to dump memory with openocd.</p>
+<p>First, connect a ST-Link v2 USB adapter to your machine and run openocd:</p>
+<p>Then use netcat to connect to OpenOcd, and halt the CPU:</p>
+<blockquote>
+<div>$ nc localhost 4444
+[prompt here]
+halt</div></blockquote>
+<p>Eventually, tell OpenOcd to dump the flash into a file:</p>
+<blockquote>
+<div>dump_image 0 0x40000 /target/dir/flash.bin</div></blockquote>
+</div>
+<div class="section" id="protections">
+<h3>Protections<a class="headerlink" href="#protections" title="Permalink to this headline">¶</a></h3>
+<p>Nordic’s NRF51 architecture provides three level of protection through its ReadOut Protection mechanism.</p>
+<div class="section" id="rdp-level-0">
+<h4>RDP level 0<a class="headerlink" href="#rdp-level-0" title="Permalink to this headline">¶</a></h4>
+<p>ReadOut Protection is disabled,  <strong>Flash memory is fully open and all memory operations are
+possible in all boot configurations</strong> (Debug features, Boot from RAM, from System memory
+bootloader or from Flash memory). In this mode there is no protection.</p>
+</div>
+<div class="section" id="rdp-level-1">
+<h4>RDP level 1<a class="headerlink" href="#rdp-level-1" title="Permalink to this headline">¶</a></h4>
+<p>When the read protection level 1 is activated, no access (read, erase, and program) to Flash memory or backup SRAM can be performed via debug features such as Serial Wire or JTAG, even while booting from SRAM or system memory bootloader. However, when booting from Flash memory, accesses to this memory and to backup SRAM from user code are allowed.</p>
+<p>Any read request to the protected Flash memory generates a bus error.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Disabling RDP level 1 protection by re-programming RDP option byte to level 0 leads to a mass erase.</strong></li>
+<li><strong>Access to Flash is still possible.</strong></li>
+<li><strong>Debug features are still enabled.</strong></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="rdp-level-2">
+<h4>RDP level 2<a class="headerlink" href="#rdp-level-2" title="Permalink to this headline">¶</a></h4>
+<p>When RDP level 2 is activated, all protections provided in Level1 are active and the chip is fully protected. The RDP option byte and all other option bytes are frozen and can no longer be modified. The JTAG, SWV (single-wire viewer), ETM, and boundary scan are disabled.</p>
+<p>When booting from Flash memory, the memory content is accessible to user code. However, booting from SRAM or from system memory bootloader is no more possible.</p>
+<p><strong>This protection is irreversible (JTAG fuse), so it’s impossible to go back to protection levels 1
+or 0.</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Debug features are disabled once and for all when RDP level 2 is set</strong></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ti.html" class="btn btn-neutral float-right" title="Texas Instruments SoCs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="nrf51822.html" class="btn btn-neutral" title="Nordic Semiconductor NRF51822 SoC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Digital Security | CC-BY-NC-SA.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

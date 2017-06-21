@@ -60,7 +60,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Hardware Forensic Database'
-copyright = '2017, Digital Security'
+copyright = '2017, Digital Security | CC-BY-NC-SA'
 author = 'Digital Security'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -139,7 +139,7 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
         'display_version': False,
         'logo_only': True,
-        #'collapse_navigation': True
+        'sticky_navigation': True
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -157,7 +157,7 @@ html_theme_options = {
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 #
-# html_logo = None
+html_logo = 'images/logo.png'
 
 # The name of an image file (relative to this directory) to use as a favicon of
 # the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -214,7 +214,7 @@ html_static_path = ['_static']
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 #
-# html_show_sphinx = True
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #

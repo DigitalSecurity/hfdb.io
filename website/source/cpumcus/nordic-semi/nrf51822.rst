@@ -1,0 +1,102 @@
+=================================
+Nordic Semiconductor NRF51822 SoC
+=================================
+
+-------
+Summary
+-------
+
++------------+---------------------+---------+
+| Category   | Feature             | Present |
++============+=====================+=========+
+|Debugging   | JTAG port           | Yes     |
+|            +---------------------+---------+
+|            | SWD port            | Yes     |
+|            +---------------------+---------+
+|            | Custom debug port   | No      |
++------------+---------------------+---------+
+| Protections| Read-out protection | Yes     |
+|            +---------------------+---------+
+|            | Known bypass        | No      |
++------------+---------------------+---------+
+
+--------
+Features
+--------
+
+The nRF51822 is a SoC able to communicate over many protocols:
+
+  * ShockBurst (legacy)
+  * Enhanced ShockBurst (250kbps, 1Mbps & 2Mbps)
+  * Bluetooth Low Energy
+
+It also includes:
+
+  * internal Flash (128k or 256k)
+  * Real Time Counter (RTC)
+  * AES hardware encryption
+
+-------------------
+Firmware extraction
+-------------------
+
+Extract firmware through SWD
+----------------------------
+
+One of the simpliest way to extract the firmware from a nRF51822 is to connect to the SWD debug interface (if enabled), and try to dump memory with openocd.
+
+First, connect a ST-Link v2 USB adapter to your machine and run openocd:
+
+.. code-block:: text
+
+    $ openocd -f /usr/share/openocd/scripts/interface/stlink-v2.cfg -f /usr/share/openocd/scripts/target/nrf51.cfg
+
+Then use netcat to connect to OpenOcd, and halt the CPU:
+
+.. code-block:: text
+
+    $ nc localhost 4444
+    [prompt here]
+    halt
+
+
+Eventually, tell OpenOcd to dump the flash into a file:
+
+.. code-block:: text
+
+    dump_image 0 0x40000 /target/dir/flash.bin
+
+Protections
+-----------
+
+Nordic's NRF51 architecture provides three level of protection through its ReadOut Protection mechanism.
+
+RDP level 0
+~~~~~~~~~~~
+
+ReadOut Protection is disabled,  **Flash memory is fully open and all memory operations are
+possible in all boot configurations** (Debug features, Boot from RAM, from System memory
+bootloader or from Flash memory). In this mode there is no protection.
+
+RDP level 1
+~~~~~~~~~~~
+
+When the read protection level 1 is activated, no access (read, erase, and program) to Flash memory or backup SRAM can be performed via debug features such as Serial Wire or JTAG, even while booting from SRAM or system memory bootloader. However, when booting from Flash memory, accesses to this memory and to backup SRAM from user code are allowed.
+
+Any read request to the protected Flash memory generates a bus error.
+
+  * **Disabling RDP level 1 protection by re-programming RDP option byte to level 0 leads to a mass erase.**
+  * **Access to Flash is still possible.**
+  * **Debug features are still enabled.**
+
+RDP level 2
+~~~~~~~~~~~
+
+When RDP level 2 is activated, all protections provided in Level1 are active and the chip is fully protected. The RDP option byte and all other option bytes are frozen and can no longer be modified. The JTAG, SWV (single-wire viewer), ETM, and boundary scan are disabled.
+
+When booting from Flash memory, the memory content is accessible to user code. However, booting from SRAM or from system memory bootloader is no more possible.
+
+**This protection is irreversible (JTAG fuse), so it’s impossible to go back to protection levels 1
+or 0.**
+
+  * **Debug features are disabled once and for all when RDP level 2 is set**

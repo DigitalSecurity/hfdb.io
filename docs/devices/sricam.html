@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sricam IP Camera &mdash; Hardware Forensic Database 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Hardware Forensic Database 1.0 documentation" href="../index.html"/>
+        <link rel="up" title="List of supported devices" href="../devices.html"/>
+        <link rel="next" title="TheQuickLock Padlock" href="thequicklock.html"/>
+        <link rel="prev" title="List of supported devices" href="../devices.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto.html">How to use the HFDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methodology.html">IoT-related forensic methodology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../toolbox.html">Forensic toolbox</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../devices.html">List of supported devices</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../devices.html#s">S</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sricam IP Camera</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#forensic-summary">Forensic Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#accessing-the-serial-port">Accessing the Serial Port</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#serial-port-configuration">Serial port configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extract-information-from-memory">Extract information from memory</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../devices.html#t">T</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpumcu.html">List of supported MCUs/CPUs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Hardware Forensic Database</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../devices.html">List of supported devices</a> &raquo;</li>
+        
+      <li>Sricam IP Camera</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/devices/sricam.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sricam-ip-camera">
+<h1>Sricam IP Camera<a class="headerlink" href="#sricam-ip-camera" title="Permalink to this headline">¶</a></h1>
+<p>Sricam sells a Wifi enabled IP Camera. This camera is connected to the Internet wia WiFi and is remotely controlled thanks to a mobile application.</p>
+<a class="reference internal image-reference" href="../_images/sricam.jpg"><img alt="IP Camera" class="align-center" src="../_images/sricam.jpg" style="width: 500.0px; height: 500.0px;" /></a>
+<div class="section" id="forensic-summary">
+<h2>Forensic Summary<a class="headerlink" href="#forensic-summary" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="42%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Category</th>
+<th class="head">Feature</th>
+<th class="head">Present</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">Data collection</td>
+<td>Console/Shell</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td>Extractible data from memory</td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td rowspan="3">Traceability /
+Accountability</td>
+<td>Real-Time Clock (RTC)</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td>System log(s)</td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td>Event log(s)</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td rowspan="2">Power management</td>
+<td>Visual indicator</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td>Can be easily powered off</td>
+<td>Yes, unplug USB cable</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="accessing-the-serial-port">
+<h2>Accessing the Serial Port<a class="headerlink" href="#accessing-the-serial-port" title="Permalink to this headline">¶</a></h2>
+<p>Unscrew the 4 screws of the Sricam IP Camera.</p>
+<a class="reference internal image-reference" href="../_images/ipcam-back.jpg"><img alt="IP Camera viewed from back" class="align-center" src="../_images/ipcam-back.jpg" style="width: 326.0px; height: 358.0px;" /></a>
+<p>Then, open it and disconnect the speaker.</p>
+<a class="reference internal image-reference" href="../_images/ipcam-inside.jpg"><img alt="Inside the camera" class="align-center" src="../_images/ipcam-inside.jpg" style="width: 291.0px; height: 360.0px;" /></a>
+<p>Connect your serial adapter as shown below:</p>
+<a class="reference internal image-reference" href="../_images/serial-port.jpg"><img alt="Inside the camera" class="align-center" src="../_images/serial-port.jpg" style="width: 360.0px; height: 640.0px;" /></a>
+</div>
+<div class="section" id="serial-port-configuration">
+<h2>Serial port configuration<a class="headerlink" href="#serial-port-configuration" title="Permalink to this headline">¶</a></h2>
+<p>This serial port uses a baudrate of 115200 and gives a prompt directly, without authentication.</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>Boot image offset: 0x10000. size: 0x70000. Booting Image .....
+
+
+U-Boot 2013.01 (Sep 01 2005 - 02:39:21)
+
+DRAM:  64 MiB
+ROM CODE has enable I cache
+SPI mode
+SF: Got idcodes
+00000000: c2 20 18 c2    . ..
+SF: Detected MX25L12805D with page size 64 KiB, total 16 MiB
+flash is 3byte mode
+*** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+
+-------------------------------
+ID: 8136110
+AC: 200  HC: 200  P1: 712  P2: 600  P3: 540
+C6: 712  DR: 950
+J: 237   H1: 237
+-------------------------------
+Net:   GMAC set RMII mode
+reset PHY
+eth0
+Warning: eth0 MAC addresses don&#39;t match:
+Address in SROM is         71:75:61:73:68:66
+Address in environment is  00:11:22:33:44:55
+
+----------Value=0x40000000------------
+Hit any key to stop autoboot:  0
+SF: Got idcodes
+00000000: c2 20 18 c2    . ..
+SF: Detected MX25L12805D with page size 64 KiB, total 16 MiB
+flash is 3byte mode
+## Booting kernel from Legacy Image at 02000000 ...
+   Image Name:   gm8136
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    2216488 Bytes = 2.1 MiB
+   Load Address: 02000000
+   Entry Point:  02000040
+   Verifying Checksum ... OK
+   XIP Kernel Image ... OK
+OK
+Not define this ID
+: mem=64M gmmem=30M console=ttyS0,115200 user_debug=31 init=/squashfs_init root=/dev/mtdblock2 rootfstype=squashfs
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+Booting Linux on physical CPU 0
+Linux version 3.3.0 (user9@ubuntu) (gcc version 4.4.0 20100318 (experimental) (Buildroot 2012.02) ) #100 PREEMPT Fri May 19 05:42:19 PDT 2006
+CPU: FA6 [66056263] revision 3 (ARMv5TE), cr=0000397f
+CPU VIPT aliasing data cache, unknown instruction cache
+Machine: Grain-Media GM8136 series
+Memory policy: ECC disabled, Data cache writeback
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+Kernel command line: mem=64M gmmem=30M console=ttyS0,115200 user_debug=31 init=/squashfs_init root=/dev/mtdblock2 rootfstype=squashfs
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 64MB = 64MB total
+Memory: 60580k/60580k available, 4956k reserved, 0K highmem
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    vmalloc : 0x84800000 - 0xff000000   (1960 MB)
+    lowmem  : 0x80000000 - 0x84000000   (  64 MB)
+    modules : 0x7f000000 - 0x80000000   (  16 MB)
+      .text : 0x80008000 - 0x803f2f54   (4012 kB)
+      .init : 0x803f3000 - 0x8040e000   ( 108 kB)
+      .data : 0x8040e000 - 0x8042a700   ( 114 kB)
+       .bss : 0x8042a724 - 0x8043e44c   (  80 kB)
+NR_IRQS:64
+gm_jiffies_init, system HZ: 100, pClk: 100000000
+console [ttyS0] enabled
+Calibrating delay loop... 709.42 BogoMIPS (lpj=3547136)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x2fcab8 - 0x2fcb00
+devtmpfs: initialized
+FMEM: 7680 pages(0x1e00000 bytes) from bank0 are reserved for Frammap.
+FMEM: Logical memory ends up at 0x84000000, init_mm:0x80004000(0x4000), PAGE_OFFSET:0x80000000(0x0),
+FMEM: FA726 Test and Debug Register: 0x0
+NET: Registered protocol family 16
+PMU: Mapped at 0xfe000000
+IC: GM8135, version: 0x1
+</pre></div>
+</div>
+</div>
+<div class="section" id="extract-information-from-memory">
+<h2>Extract information from memory<a class="headerlink" href="#extract-information-from-memory" title="Permalink to this headline">¶</a></h2>
+<p>Since this <strong>camera has no logs</strong>, the only information we can get is the usual unix-like stuff, i.e. :</p>
+<blockquote>
+<div><ul class="simple">
+<li>connected users (netstat, who)</li>
+<li>active processes</li>
+<li>virtual memory</li>
+</ul>
+</div></blockquote>
+<p>If the camera is connected to Internet through an existing WiFi network, its date and time are synced.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="thequicklock.html" class="btn btn-neutral float-right" title="TheQuickLock Padlock" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../devices.html" class="btn btn-neutral" title="List of supported devices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Digital Security | CC-BY-NC-SA.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

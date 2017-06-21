@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>IoT-related forensic methodology &mdash; Hardware Forensic Database 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Hardware Forensic Database 1.0 documentation" href="index.html"/>
+        <link rel="next" title="IoT Forensic Investigator toolbox" href="toolbox.html"/>
+        <link rel="prev" title="How to use the HFDB" href="howto.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="howto.html">How to use the HFDB</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">IoT-related forensic methodology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#context">Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#proposed-methodology">Proposed methodology</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#i-evaluate-the-device">I.  Evaluate the device</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#i-1-is-the-device-powered-on">I.1. Is the device powered on ?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#i-2-determine-the-device-power-state">I.2. Determine the device power state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#i-3-collect-information-about-the-device">I.3. Collect information about the device</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ii-live-analysis-of-a-device">II. Live analysis of a device</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ii-1-using-the-device-s-features-to-collect-data">II.1. Using the device’s features to collect data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ii-2-hot-wiring-a-device">II.2. Hot wiring a device</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ii-3-exploiting-a-vulnerability-to-gain-access">II.3. Exploiting a vulnerability to gain access</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolbox.html">Forensic toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devices.html">List of supported devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cpumcu.html">List of supported MCUs/CPUs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Hardware Forensic Database</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>IoT-related forensic methodology</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/methodology.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="iot-related-forensic-methodology">
+<h1>IoT-related forensic methodology<a class="headerlink" href="#iot-related-forensic-methodology" title="Permalink to this headline">¶</a></h1>
+<p>This section proposes a forensic methodology in order to evaluate, collect and preserve evidences from various devices.
+This methodology aims at providing the most efficient way to collect valuable information from smart or connected devices,
+generally small and providing a few communication means.</p>
+<div class="section" id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<p>Standard forensic methodologies are designed to handle incidents related to computers (servers, workstations, laptops). These systems
+usually use a known operating system, combined with well-known storage devices (hard drives, SD/MMC/CF cards, etc.) that are mostly easily
+available to the forensic investigator. Thus, creating a forensic images of these storage medias is quite straightforward, and various
+dedicated forensic devices are available on the market.</p>
+<p>However, embedded devices are small form-factor tiny computers, sometimes using some kind of operating system, sometimes not. Storage medias
+are also quite different, as they rely on soldered NAND flash memories or even integrated flash memory that is not directly readable without
+having the correct tools and procedures.</p>
+<p>This is why we developed this methodology for the IoT forensic investigator, in order to provide him/her with the correct procedures and tools
+to perform all the required tasks.</p>
+</div>
+<div class="section" id="proposed-methodology">
+<h2>Proposed methodology<a class="headerlink" href="#proposed-methodology" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="i-evaluate-the-device">
+<h3>I.  Evaluate the device<a class="headerlink" href="#i-evaluate-the-device" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="i-1-is-the-device-powered-on">
+<h4>I.1. Is the device powered on ?<a class="headerlink" href="#i-1-is-the-device-powered-on" title="Permalink to this headline">¶</a></h4>
+<p>First of all, it is important to evaluate a device before collecting information. There are basically two cases:</p>
+<ul class="simple">
+<li>the device is powered on</li>
+<li>the device is powered off</li>
+</ul>
+<p>It is sometimes difficult to tell wether a device is powered on or off, because it may have no visual indicators. Many connected objects are
+powered on by default and cannot be powered off without removing the power source (if possible), whereas they provide no visual indicators (LEDs or screens).
+However, they may advertise as a bluetooth low energy device or communicate through another proprietary protocol.</p>
+</div>
+<div class="section" id="i-2-determine-the-device-power-state">
+<h4>I.2. Determine the device power state<a class="headerlink" href="#i-2-determine-the-device-power-state" title="Permalink to this headline">¶</a></h4>
+<p>Look for the device in the <em>HFDB</em>, it may be listed with details information about the supported communication protocols and how to evaluate the device’ power state.</p>
+<p>If not, you may try the following:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Using nRFConnect application on Android, try to determine if the device is advertising itself based on the measured RSSI</li>
+<li>Interact with the device if some buttons are available, and see if it may cause some kind of reaction</li>
+<li>Read the device user manual and try to identify if there is an easy way to determine the device’s power state</li>
+</ol>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Do not power on or off the device !</p>
+</div>
+</div>
+<div class="section" id="i-3-collect-information-about-the-device">
+<h4>I.3. Collect information about the device<a class="headerlink" href="#i-3-collect-information-about-the-device" title="Permalink to this headline">¶</a></h4>
+<p>Collect the following information if available:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Vendor name</li>
+<li>Device name</li>
+<li>Serial number</li>
+<li>Advertised information (Bluetooth Low Energy advertisements, WiFi beacons, etc. )</li>
+<li>Device MAC address</li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the device is powered off, go to III.</p>
+</div>
+</div>
+</div>
+<div class="section" id="ii-live-analysis-of-a-device">
+<h3>II. Live analysis of a device<a class="headerlink" href="#ii-live-analysis-of-a-device" title="Permalink to this headline">¶</a></h3>
+<p>An active device may expose valuable information that may be lost if it is powered off or
+if the device is not correctly handled. This section describes a forensic process aiming at
+collecting all the available information.</p>
+<div class="section" id="ii-1-using-the-device-s-features-to-collect-data">
+<h4>II.1. Using the device’s features to collect data<a class="headerlink" href="#ii-1-using-the-device-s-features-to-collect-data" title="Permalink to this headline">¶</a></h4>
+<p>Many smart/connected devices rely on a communication protocol to provide the user with useful
+information as measurements, device identity, account information, etc. This communication protocol
+may be used to extract valuable information while the device is active, and especially volatile information.</p>
+<p>Using the device’s features requires the forensic investigator to know how to interact with this device. The major
+encountered protocols are:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Telnet: offers a system shell (authentication may be required)</li>
+<li>SSH: offers a system shell (authentication may be required)</li>
+<li>UART: may offer a shell (authentication may be required) or use a proprietary protocol</li>
+<li>Bluetooth Low Energy: exposes services and characteristics may be queried to extract information (proprietary protocol sometimes)</li>
+<li>WiFi: offers an API that may be queried to collect information about the device</li>
+</ul>
+</div></blockquote>
+<p>Embedded operating systems generally provides Telnet, SSH or Serial console access while tiny smart devices rely on other proprietary protocols.
+Therefore, the forensic investigator needs to reverse-engineer these proprietary protocols and develop his/her own tool to communicate with the corresponding devices.</p>
+</div>
+<div class="section" id="ii-2-hot-wiring-a-device">
+<h4>II.2. Hot wiring a device<a class="headerlink" href="#ii-2-hot-wiring-a-device" title="Permalink to this headline">¶</a></h4>
+<p>The forensic investigator may need to connect to a debug or serial port while the device is active. This may impact the device:</p>
+<blockquote>
+<div><ul class="simple">
+<li>short-circuits may damage the device</li>
+<li>soldering wires to a specific port may be challenging, especially with a live device</li>
+</ul>
+</div></blockquote>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">todo</p>
+</div>
+</div>
+<div class="section" id="ii-3-exploiting-a-vulnerability-to-gain-access">
+<h4>II.3. Exploiting a vulnerability to gain access<a class="headerlink" href="#ii-3-exploiting-a-vulnerability-to-gain-access" title="Permalink to this headline">¶</a></h4>
+<p>In case the device features are not directly available, the forensic investigator may exploit a known vulnerability to get access to the device. This is particularly
+true for devices using embedded operating systems (Linux-based mostly).</p>
+<p>HFDB list of supported devices may provide some known vulnerability that may be exploited, along with working exploits.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="toolbox.html" class="btn btn-neutral float-right" title="IoT Forensic Investigator toolbox" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="howto.html" class="btn btn-neutral" title="How to use the HFDB" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Digital Security | CC-BY-NC-SA.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
