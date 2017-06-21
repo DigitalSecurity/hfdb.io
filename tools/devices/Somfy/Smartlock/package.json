@@ -1,0 +1,15 @@
+{
+  "name": "somfy-smartlock-forensic",
+  "version": "1.0.0",
+  "description": "Somfy Smartlock forensic tool",
+  "main": "somfy-forensic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Digital Security",
+  "license": "MIT",
+  "dependencies": {
+    "argparse": "^1.0.9",
+    "noble": "^1.8.1"
+  }
+}
