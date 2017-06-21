@@ -34,7 +34,7 @@ Forensic Summary
 Extracting valuable information
 -------------------------------
 
-Use `our dedicated tool <https://github.com/digitalsecurity/hfdb.io/devices/Fora/DiamondMini/`_ to extract valuable information.
+Use `our dedicated tool <https://github.com/digitalsecurity/hfdb.io/devices/Fora/DiamondMini/>`_ to extract valuable information.
 
 First, press the button of the Fora Diamond Mini glucose monitoring system as many times as required for the blue LED to blink.
 Then, use *hcitool* to scan the available devices and locate the Fora GMS device:
