@@ -103,7 +103,21 @@ The forensic investigator may need to connect to a debug or serial port while th
   * short-circuits may damage the device
   * soldering wires to a specific port may be challenging, especially with a live device
 
-.. todo:: todo
+Conductive paste can be used to quickly connect wires to debug ports, whereas it requires some kind of level adaptation circuitry. This solution is quite elegant
+but not very easy to use as the paste behaves as a resistor and cause voltage drops.
+
+.. image:: images/tools/ten20.png
+    :scale: 80
+    :align: center
+
+A portable soldering iron is another way to hot wire an active device very quickly. However, one may be careful and remove the soldermask before soldering wires to
+some pads or connector footprints.
+
+.. image:: images/tools/portable-iron.jpg
+    :scale: 50
+    :align: center
+
+Last but not least, some devices may not allow to be open while active, in this case it is very difficult to access their internals and connect to specific ports.
 
 II.3. Exploiting a vulnerability to gain access
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
