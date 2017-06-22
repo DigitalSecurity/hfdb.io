@@ -278,10 +278,13 @@ Therefore, the forensic investigator needs to reverse-engineer these proprietary
 <li>soldering wires to a specific port may be challenging, especially with a live device</li>
 </ul>
 </div></blockquote>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">todo</p>
-</div>
+<p>Conductive paste can be used to quickly connect wires to debug ports, whereas it requires some kind of level adaptation circuitry. This solution is quite elegant
+but not very easy to use as the paste behaves as a resistor and cause voltage drops.</p>
+<a class="reference internal image-reference" href="_images/ten20.png"><img alt="_images/ten20.png" class="align-center" src="_images/ten20.png" style="width: 283.2px; height: 264.8px;" /></a>
+<p>A portable soldering iron is another way to hot wire an active device very quickly. However, one may be careful and remove the soldermask before soldering wires to
+some pads or connector footprints.</p>
+<a class="reference internal image-reference" href="_images/portable-iron.jpg"><img alt="_images/portable-iron.jpg" class="align-center" src="_images/portable-iron.jpg" style="width: 300.0px; height: 300.0px;" /></a>
+<p>Last but not least, some devices may not allow to be open while active, in this case it is very difficult to access their internals and connect to specific ports.</p>
 </div>
 <div class="section" id="ii-3-exploiting-a-vulnerability-to-gain-access">
 <h4>II.3. Exploiting a vulnerability to gain access<a class="headerlink" href="#ii-3-exploiting-a-vulnerability-to-gain-access" title="Permalink to this headline">¶</a></h4>
