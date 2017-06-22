@@ -30,6 +30,18 @@ Forensic Summary
 |                 | Can be easily powered off        | No                           |
 +-----------------+----------------------------------+------------------------------+
 
+-----------------
+Device evaluation
+-----------------
+
+Press the button on the device, the screen will display some information (number of records, records).
+
+If the screen stays black, the device is not powered on.
+
+The device advertises itself using Bluetooth Low Energy with the name *DIAMOND MINI*
+
+
+
 -------------------------------
 Extracting valuable information
 -------------------------------
