@@ -7,15 +7,16 @@ Summary
 +------------+---------------------+---------+
 | Category   | Feature             | Present |
 +============+=====================+=========+
-|Debugging   | JTAG port           |  NO     |
+|Debugging   | JTAG port           | No      |
 |            +---------------------+---------+
-|            | SWD port            | NO      |
-+------------+---------------------+---------+
-| Protections| Read-out protection | YES     |
+|            | SWD port            | No      |
 |            +---------------------+---------+
-|            | Known bypass        | **NO**  |
+|            | Custom debug port   | Yes     |
 +------------+---------------------+---------+
-
+| Protections| Read-out protection | Yes     |
+|            +---------------------+---------+
+|            | Known bypass        | No      |
++------------+---------------------+---------+
 
 Features
 --------
@@ -33,7 +34,7 @@ Using an USBASP programmer combined with *avrdude*, one may be able to extract t
 
 .. code-block:: text
 
-    $ avrdude -c usbasp -p atmega328p -U flash:r:firmware.bin:r 
+    $ avrdude -c usbasp -p atmega328p -U flash:r:firmware.bin:r
 
 Protections
 ~~~~~~~~~~~

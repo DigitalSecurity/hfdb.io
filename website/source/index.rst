@@ -20,7 +20,7 @@ How to contribute
 -----------------
 
 If you want to contribute to this project, i.e. add information about a specific device and how to forensically handle it or even
-add an IoT-oriented forensic tool, feel free to clone this repository and submit a Pull Request.
+add an IoT-oriented forensic tool, feel free to clone `this repository <https://github.com/digitalsecurity/hfdb.io>`_ and submit a Pull Request.
 
 
 License

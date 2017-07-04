@@ -101,6 +101,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#ii-1-using-the-device-s-features-to-collect-data">II.1. Using the device’s features to collect data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ii-2-hot-wiring-a-device">II.2. Hot wiring a device</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ii-3-exploiting-a-vulnerability-to-gain-access">II.3. Exploiting a vulnerability to gain access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ii-4-extracting-data-from-an-active-device-live-acquisition">II.4. Extracting data from an active device (live acquisition)</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#iii-create-bit-stream-copies-of-storage-medias">III. Create bit-stream copies of storage medias</a><ul>
@@ -292,6 +293,23 @@ some pads or connector footprints.</p>
 true for devices using embedded operating systems (Linux-based mostly).</p>
 <p>HFDB <a class="reference internal" href="devices.html"><span class="doc">list of supported devices</span></a> may provide some known vulnerability that may be exploited, along with working exploits.</p>
 </div>
+<div class="section" id="ii-4-extracting-data-from-an-active-device-live-acquisition">
+<h4>II.4. Extracting data from an active device (live acquisition)<a class="headerlink" href="#ii-4-extracting-data-from-an-active-device-live-acquisition" title="Permalink to this headline">¶</a></h4>
+<p>Once access is gained on the device, it may be possible to extract information from storage device. On devices running an OS, specific
+tools such as <em>netcat</em> may be used to access any storage device and extract its content and save it on an external storage device. Usually,
+one may have an administrative device to perform this sort of data extraction).</p>
+<p>Performing live acquisition  may be useful especially when the device uses on-the-fly encryption to avoid cold data acquisition (when the device is powered off).</p>
+<p>It is also a good way to collect volatile data, following the <strong>order of volatility</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>RAM</li>
+<li>running threads (if multi-tasking)</li>
+<li>process list (if any OS is present)</li>
+<li>connected users</li>
+<li>active connections (console/TCP/UDP)</li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 <div class="section" id="iii-create-bit-stream-copies-of-storage-medias">
 <h3>III. Create bit-stream copies of storage medias<a class="headerlink" href="#iii-create-bit-stream-copies-of-storage-medias" title="Permalink to this headline">¶</a></h3>
@@ -328,6 +346,17 @@ it is possible.</p>
 <li>eMMC (Interface similar to SD/MMC card but soldered on the PCB in a BGA package)</li>
 </ul>
 </div></blockquote>
+<p>Dumping these flash memory chips may be challenging because:</p>
+<blockquote>
+<div><ul class="simple">
+<li>some packages are difficult to connect to (especially Ball Grid Array packages, better known as BGA)</li>
+<li>NAND Flash memory may have its own ECC and spare data system</li>
+<li>it is not as easy as it sounds to avoid write operations on some chips</li>
+</ul>
+</div></blockquote>
+<p>Dumping SPI flash memory chips in a forensic way is possible as these chips usually provides a write-protect pin. When this pin is connected to ground, all write operations are forbidden by the chip, therefore this acts as an hardware write-blocker.</p>
+<p>At the moment, the best way to create a bit-stream copy from these chips is to use a commercial dumper that supports a huge number of devices, such as the TNM5000.</p>
+<a class="reference internal image-reference" href="_images/tnm5000.jpg"><img alt="_images/tnm5000.jpg" class="align-center" src="_images/tnm5000.jpg" style="width: 163.5px; height: 225.0px;" /></a>
 </div>
 <div class="section" id="iii-3-extracting-data-from-classic-storage-medias">
 <h4>III.3. Extracting data from classic storage medias<a class="headerlink" href="#iii-3-extracting-data-from-classic-storage-medias" title="Permalink to this headline">¶</a></h4>

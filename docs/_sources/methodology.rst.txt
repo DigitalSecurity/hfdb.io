@@ -127,6 +127,23 @@ true for devices using embedded operating systems (Linux-based mostly).
 
 HFDB :doc:`list of supported devices <devices>` may provide some known vulnerability that may be exploited, along with working exploits.
 
+II.4. Extracting data from an active device (live acquisition)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once access is gained on the device, it may be possible to extract information from storage device. On devices running an OS, specific
+tools such as *netcat* may be used to access any storage device and extract its content and save it on an external storage device. Usually,
+one may have an administrative device to perform this sort of data extraction).
+
+Performing live acquisition  may be useful especially when the device uses on-the-fly encryption to avoid cold data acquisition (when the device is powered off).
+
+It is also a good way to collect volatile data, following the **order of volatility**:
+
+  * RAM
+  * running threads (if multi-tasking)
+  * process list (if any OS is present)
+  * connected users
+  * active connections (console/TCP/UDP)
+
 
 III. Create bit-stream copies of storage medias
 -----------------------------------------------
@@ -164,6 +181,19 @@ External flash memories are dedicated electronic chips used to store information
   * Parallel flash memory (Easy Flash or similar)
   * eMMC (Interface similar to SD/MMC card but soldered on the PCB in a BGA package)
 
+Dumping these flash memory chips may be challenging because:
+
+  * some packages are difficult to connect to (especially Ball Grid Array packages, better known as BGA)
+  * NAND Flash memory may have its own ECC and spare data system
+  * it is not as easy as it sounds to avoid write operations on some chips
+
+Dumping SPI flash memory chips in a forensic way is possible as these chips usually provides a write-protect pin. When this pin is connected to ground, all write operations are forbidden by the chip, therefore this acts as an hardware write-blocker.
+
+At the moment, the best way to create a bit-stream copy from these chips is to use a commercial dumper that supports a huge number of devices, such as the TNM5000.
+
+.. image:: images/tools/tnm5000.jpg
+    :scale: 50
+    :align: center
 
 III.3. Extracting data from classic storage medias
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
