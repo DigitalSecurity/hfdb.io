@@ -28,12 +28,12 @@ $ sudo python setup.py install
    F-RAM                      Raspberry Pi
 [1] CS   --------------- [24] BCM 8 (SPI0 CE0)
 [2] SO   --------------- [21] BCM 9 (SPI0 MISO)
-[3] WP   --------------- [20] Masse
-[4] VSS  --------------- [20] Masse
+[3] WP   --------------- [20] Ground 
+[4] VSS  --------------- [20] Ground
 [5] SI   --------------- [19] BCM 10 (SPI0 MOSI)
 [6] SCK  --------------- [23] BCM 11 (SPI0 SCLK)
-[7] HOLD --------------- [20] Masse
-[8] VDD  --------------- [17] Alimentation 3.3V
+[7] HOLD --------------- [20] Ground
+[8] VDD  --------------- [17] Power (3.3V)
 ```
 
 How to use this tool

@@ -21,7 +21,7 @@ def device_id(spi):
 
 def dump_memory(spi):
     """Memory dumper"""
-    # 24 bits for the address(19 useful bits)
+    # 24 bits for the address (19 useful bits)
     dump = []
     for addr in range(524288):
         address = []
