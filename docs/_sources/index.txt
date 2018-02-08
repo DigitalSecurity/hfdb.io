@@ -41,6 +41,12 @@ The licensor cannot revoke these freedoms as long as you follow the license term
   * NonCommercial (NC): you may not use the material for commercial purposes.
   * ShareAlike (SA): if you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
 
++----+----+
+|test|toto|
++====+====+
+|1   |2   |
++----+----+
+
 .. toctree::
     :hidden:
     :maxdepth: 3

@@ -25,19 +25,29 @@
   
 
   
+  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Nordic Semiconductor NRF51822 SoC" href="nordic-semi/nrf51822.html" />
-    <link rel="prev" title="ATMega48 / ATMega88 / ATMega168 / ATMega328" href="atmel/atmegax8.html" /> 
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/tablefix.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Hardware Forensic Database 1.0 documentation" href="../index.html"/>
+        <link rel="up" title="List of supported MCUs / CPUs" href="../cpumcu.html"/>
+        <link rel="next" title="Nordic Semiconductor NRF51822 SoC" href="nordic-semi/nrf51822.html"/>
+        <link rel="prev" title="ATMega48 / ATMega88 / ATMega168 / ATMega328" href="atmel/atmegax8.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
@@ -54,7 +64,7 @@
 
           
             
-            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/logo.png" class="logo" />
           
           </a>
 
@@ -80,90 +90,19 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../howto.html">How to use the HFDB</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../howto.html#specific-forensic-methodologies">Specific Forensic Methodologies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../howto.html#specific-forensic-tools">Specific Forensic Tools</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../methodology.html">IoT-related forensic methodology</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../methodology.html#context">Context</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../methodology.html#proposed-methodology">Proposed methodology</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../methodology.html#i-evaluate-the-device">I.  Evaluate the device</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../methodology.html#i-1-is-the-device-powered-on">I.1. Is the device powered on ?</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../methodology.html#i-2-determine-the-device-power-state">I.2. Determine the device power state</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../methodology.html#i-3-collect-information-about-the-device">I.3. Collect information about the device</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../methodology.html#ii-live-analysis-of-a-device">II. Live analysis of a device</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../methodology.html#ii-1-using-the-device-s-features-to-collect-data">II.1. Using the device's features to collect data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../methodology.html#ii-2-hot-wiring-a-device">II.2. Hot wiring a device</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../methodology.html#ii-3-exploiting-a-vulnerability-to-gain-access">II.3. Exploiting a vulnerability to gain access</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../methodology.html#ii-4-extracting-data-from-an-active-device-live-acquisition">II.4. Extracting data from an active device (live acquisition)</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../methodology.html#iii-create-bit-stream-copies-of-storage-medias">III. Create bit-stream copies of storage medias</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../methodology.html#iii-1-extracting-data-from-internal-flash">III.1. Extracting data from internal flash</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../methodology.html#iii-2-extracting-data-from-external-flash">III.2. Extracting data from external flash</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../methodology.html#iii-3-extracting-data-from-classic-storage-medias">III.3. Extracting data from classic storage medias</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../howto.html">How to use the HFDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methodology.html">IoT-related forensic methodology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../toolbox.html">Forensic toolbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../devices.html">List of supported devices</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../devices.html#f">F</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../devices/fora_gms.html">Fora Bluetooth Glucose Monitoring System</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../devices/fora_gms.html#forensic-summary">Forensic Summary</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../devices/fora_gms.html#device-evaluation">Device evaluation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../devices/fora_gms.html#extracting-valuable-information">Extracting valuable information</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../devices.html#s">S</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../devices/sricam.html">Sricam IP Camera</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../devices/sricam.html#forensic-summary">Forensic Summary</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../devices/sricam.html#accessing-the-serial-port">Accessing the Serial Port</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../devices/sricam.html#serial-port-configuration">Serial port configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../devices/sricam.html#extract-information-from-memory">Extract information from memory</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../devices.html#t">T</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../devices/thequicklock.html">TheQuickLock padlock</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../devices/thequicklock.html#forensic-summary">Forensic Summary</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../devices/thequicklock.html#device-evaluation">Device evaluation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../devices/thequicklock.html#accessing-the-soc">Accessing the SoC</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../devices/thequicklock.html#extracting-data-from-memory">Extracting data from memory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../devices/thequicklock.html#extracting-the-event-log-and-the-pin-code">Extracting the event log and the PIN code</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../devices.html#v">V</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../devices/vachette_entr.html">Vachette ENTR smartlock</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../devices.html">List of supported devices</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../cpumcu.html">List of supported MCUs/CPUs</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../cpumcu.html#forensic-summaries">Forensic summaries</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="atmel.html">Atmel</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="atmel/atmegax8.html">ATMegaX8 family</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="atmel.html">Atmel</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Nordic Semiconductor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="nordic-semi/nrf51822.html">nRF51822</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nordic-semi/nrf52832.html">nRF52832</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="ti.html">Texas Instruments</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="ti/cc254x.html">CC254x family</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="ti.html">Texas Instruments</a></li>
 </ul>
 </li>
 </ul>
@@ -179,7 +118,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Hardware Forensic Database</a>
@@ -189,9 +128,7 @@
 
       
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -222,7 +159,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/cpumcus/nordic-semi.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/cpumcus/nordic-semi.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -276,7 +213,9 @@
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -316,11 +255,10 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: ''
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -334,13 +272,14 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
+  
+  
   <script type="text/javascript">
       jQuery(function () {
-          
-          SphinxRtdTheme.Navigation.enableSticky();
-          
+          SphinxRtdTheme.StickyNav.enable();
       });
-  </script> 
+  </script>
+   
 
 </body>
 </html>

@@ -1,0 +1,7 @@
+tr .row-odd {
+	background-color: #eee;	
+}
+
+tr .row-even {
+	background-color: #888;
+}

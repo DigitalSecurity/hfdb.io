@@ -1,0 +1,11 @@
+.wy-nav-content .rst-content .row-odd {
+	background-color: #eaeaea;	
+}
+
+.wy-nav-content .rst-content .row-even {
+	background-color: #fafafa;
+}
+
+table.table.table-bordered {
+	width: 80%;
+}
