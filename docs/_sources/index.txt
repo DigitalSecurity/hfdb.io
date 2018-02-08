@@ -1,0 +1,52 @@
+.. Hardware Forensic Database documentation master file, created by
+   sphinx-quickstart on Tue Jun 20 08:56:27 2017.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to the Hardware Forensic Database!
+======================================================
+
+What is the Hardware Forensic Database ?
+----------------------------------------
+
+The *Hardware Forensic Database* (or HFDB) is a project of CERT-UBIK aiming at providing a collaborative
+knowledge base related to IoT Forensic methodologies and tools.
+
+This database provides multiple guides to collect valuable information from various smart/connected devices, as well
+as dedicated tools. These guides allows quick information extraction and provides all the required material to perform
+a forensic analysis on specific devices.
+
+How to contribute
+-----------------
+
+If you want to contribute to this project, i.e. add information about a specific device and how to forensically handle it or even
+add an IoT-oriented forensic tool, feel free to clone `this repository <https://github.com/digitalsecurity/hfdb.io>`_ and submit a Pull Request.
+
+
+License
+-------
+
+This initiative is published under the Creative Commons license, `BY-NC-SA 4.0 <https://creativecommons.org/licenses/by-nc-sa/4.0/>`_.
+
+**You are free to:**
+
+  * Share: copy and redistribute the material in any medium or format
+  * Adapt: remix, transform, and build upon the material
+
+The licensor cannot revoke these freedoms as long as you follow the license terms.
+
+**Under the following terms:**
+
+  * Attribution (BY): you must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+  * NonCommercial (NC): you may not use the material for commercial purposes.
+  * ShareAlike (SA): if you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+
+.. toctree::
+    :hidden:
+    :maxdepth: 3
+
+    How to use the HFDB <howto>
+    IoT-related forensic methodology <methodology>
+    Forensic toolbox <toolbox>
+    List of supported devices <devices>
+    List of supported MCUs/CPUs <cpumcu>
