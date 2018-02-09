@@ -19,7 +19,7 @@ Moreover, we provide an IoT-related forensic methodology you may want to follow 
 
 The search box at the top-left corner of this website is a good way to quickly find information about a specific device.
 
-
+:doc:`cpumcus/ti/ti_tools_techniques`
 -----------------------
 Specific Forensic Tools
 -----------------------
