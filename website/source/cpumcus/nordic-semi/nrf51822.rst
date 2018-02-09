@@ -17,7 +17,7 @@ Summary
 +------------+---------------------+---------+
 | Protections| Read-out protection | Yes     |
 |            +---------------------+---------+
-|            | Known bypass        | No      |
+|            | Known bypass        | Yes     |
 +------------+---------------------+---------+
 
 --------
@@ -104,13 +104,14 @@ or 0.**
 Bypassing Firmware Extraction Controls
 --------------------------------------
 
-This was originally published by `Include Security <http://blog.includesecurity.com/2015/11/NordicSemi-ARM-SoC-Firmware-dumping-technique.html>` where they demonstrated that the RDP on the nRF51822 could be bypassed by the following method:
+This was originally published by `Include Security <http://blog.includesecurity.com/2015/11/NordicSemi-ARM-SoC-Firmware-dumping-technique.html>`_ where they demonstrated that the RDP on the nRF51822 could be bypassed by the following method:
 
 #. Ensure that the device has debug enabled and is halted (for openOCD this is :code:`reset halt`)
 #. Locate a load instruction of the form :code:`ldr rN [ rM #0 ]`
-  * Such an instruction reads an address from a register (rM) and loads the data from that address into another register (rN), the #0 is an offset of zero
-    e.g. :code:`ldr r3 [ r4, #0 ]` would load the data at memory address held in r4 into the r3 register
-  * A method for iterating through the code in openOCD is given in the above link
+
+  #. Such an instruction reads an address from a register (rM) and loads the data from that address into another register (rN), the #0 is an offset of zero e.g. :code:`ldr r3 [ r4, #0 ]` would load the data at memory address held in r4 into the r3 register
+  #. A method for iterating through the code in openOCD is given in the above link
+
 #. Using openOCD, set the register value of the address you want to dump into the relevant register in your target code (you can also set the PC) and then run :code:`step` to step through the instruction. You now have the value at the desired address in the register you want.
 #. Iterate this using a script to dump the full firmware
 
@@ -142,4 +143,3 @@ An example in Ruby taken from the above article is here:
 
    dumpfile.close
    debug.close
-
