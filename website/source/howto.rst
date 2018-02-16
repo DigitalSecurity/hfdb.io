@@ -18,11 +18,3 @@ and more importantly how to collect and interpret valuable information.
 Moreover, we provide an IoT-related forensic methodology you may want to follow in order to collect, preserve and investigate smart/connected objects.
 
 The search box at the top-left corner of this website is a good way to quickly find information about a specific device.
-
-:doc:`cpumcus/ti/ti_tools_techniques`
------------------------
-Specific Forensic Tools
------------------------
-
-We also develop `specific tools <https://github.com/digitalsecurity/hfdb.io/tree/master/tools/>`_ required to automate collection and extraction for some specific devices or file format, these tools
-are part of this project and available in our Github repository. They are usually referenced in methodologies and may be found very quickly.

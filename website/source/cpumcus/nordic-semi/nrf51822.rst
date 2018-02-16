@@ -101,6 +101,9 @@ or 0.**
 
   * **Debug features are disabled once and for all when RDP level 2 is set**
 
+
+.. _nrf51_bypass:
+
 Bypassing Firmware Extraction Controls
 --------------------------------------
 
@@ -119,12 +122,12 @@ An example in Ruby taken from the above article is here:
 
 .. code-block:: ruby
    :linenos:
-   
+
    #!/usr/bin/env ruby
 
    require 'net/telnet'
 
-   debug = Net::Telnet::new("Host" => "localhost", 
+   debug = Net::Telnet::new("Host" => "localhost",
                             "Port" => 4444)
 
    dumpfile = File.open("dump.bin", "w")

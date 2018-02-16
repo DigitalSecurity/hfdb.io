@@ -2,13 +2,15 @@
 Tools and Techniques for Assessing TI CCxxxx ICs
 ================================================
 
+.. _ti-techniques-arduino-cc:
+
 -----------------------------------
 CC Debugger Emulation using Arduino
 -----------------------------------
 
-It is possible to emulate a TI debugger for the CC chips, running the CC.Debugger protocol, via bit-banging on an Arduino. Using the GPIO pins, and some code, most available arduinos are able to effectively act as debuggers for TI CC254x ICs. 
+It is possible to emulate a TI debugger for the CC chips, running the CC.Debugger protocol, via bit-banging on an Arduino. Using the GPIO pins, and some code, most available arduinos are able to effectively act as debuggers for TI CC254x ICs.
 
-The relevant code can be found `on GitHub <https://github.com/wavesoft/CCLib>`_. 
+The relevant code can be found `on GitHub <https://github.com/wavesoft/CCLib>`_.
 
 Here is the BOM for this project:
 
@@ -27,4 +29,3 @@ Operation is fairly straightforward:
 #. To read flash off the device use the command: :code:`./cc_read_flash.py -p /dev/ttyS0 --out=output.hex`
 #. To write flash use the following command: :code:`./cc_read_flash.py -p /dev/ttyS0 --out=output.hex`
 #. To let the device resume normal operations, use this command: :code:`./cc_resume.py -p /dev/ttyS0`
-
