@@ -285,19 +285,19 @@ or 0.</strong></p>
 </div>
 </div>
 <div class="section" id="bypassing-firmware-extraction-controls">
-<h3>Bypassing Firmware Extraction Controls<a class="headerlink" href="#bypassing-firmware-extraction-controls" title="Permalink to this headline">¶</a></h3>
-<p>This was originally published by <cite>Include Security &lt;http://blog.includesecurity.com/2015/11/NordicSemi-ARM-SoC-Firmware-dumping-technique.html&gt;</cite> where they demonstrated that the RDP on the nRF51822 could be bypassed by the following method:</p>
+<span id="nrf51-bypass"></span><h3>Bypassing Firmware Extraction Controls<a class="headerlink" href="#bypassing-firmware-extraction-controls" title="Permalink to this headline">¶</a></h3>
+<p>This was originally published by <a class="reference external" href="http://blog.includesecurity.com/2015/11/NordicSemi-ARM-SoC-Firmware-dumping-technique.html">Include Security</a> where they demonstrated that the RDP on the nRF51822 could be bypassed by the following method:</p>
 <ol class="arabic simple">
 <li>Ensure that the device has debug enabled and is halted (for openOCD this is <code class="code docutils literal"><span class="pre">reset</span> <span class="pre">halt</span></code>)</li>
-<li><dl class="first docutils">
-<dt>Locate a load instruction of the form <code class="code docutils literal"><span class="pre">ldr</span> <span class="pre">rN</span> <span class="pre">[</span> <span class="pre">rM</span> <span class="pre">#0</span> <span class="pre">]</span></code></dt>
-<dd><ul class="first last">
+<li>Locate a load instruction of the form <code class="code docutils literal"><span class="pre">ldr</span> <span class="pre">rN</span> <span class="pre">[</span> <span class="pre">rM</span> <span class="pre">#0</span> <span class="pre">]</span></code></li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
 <li>Such an instruction reads an address from a register (rM) and loads the data from that address into another register (rN), the #0 is an offset of zero e.g. <code class="code docutils literal"><span class="pre">ldr</span> <span class="pre">r3</span> <span class="pre">[</span> <span class="pre">r4,</span> <span class="pre">#0</span> <span class="pre">]</span></code> would load the data at memory address held in r4 into the r3 register</li>
 <li>A method for iterating through the code in openOCD is given in the above link</li>
-</ul>
-</dd>
-</dl>
-</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple">
 <li>Using openOCD, set the register value of the address you want to dump into the relevant register in your target code (you can also set the PC) and then run <code class="code docutils literal"><span class="pre">step</span></code> to step through the instruction. You now have the value at the desired address in the register you want.</li>
 <li>Iterate this using a script to dump the full firmware</li>
 </ol>

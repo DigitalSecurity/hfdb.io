@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>IoT Forensic Investigator toolbox &mdash; Hardware Forensic Database 1.0 documentation</title>
+  <title>IoT Forensic Investigator Tools &amp; Techniques &mdash; Hardware Forensic Database 1.0 documentation</title>
   
 
   
@@ -91,7 +91,19 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="howto.html">How to use the HFDB</a></li>
 <li class="toctree-l1"><a class="reference internal" href="methodology.html">IoT-related forensic methodology</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Forensic toolbox</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Forensic toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hardware">Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#quick-list-of-what-you-may-need">Quick list of what you may need</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#specific-forensic-software">Specific Forensic Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#techniques">Techniques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#debugging-on-the-cheap">Debugging on the cheap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bypassing-hardware-protections-against-firmware-extraction">Bypassing hardware protections against firmware extraction</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="devices.html">List of supported devices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cpumcu.html">List of supported MCUs/CPUs</a></li>
 </ul>
@@ -138,7 +150,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>IoT Forensic Investigator toolbox</li>
+      <li>IoT Forensic Investigator Tools &amp; Techniques</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -157,19 +169,53 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="iot-forensic-investigator-toolbox">
-<h1>IoT Forensic Investigator toolbox<a class="headerlink" href="#iot-forensic-investigator-toolbox" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="iot-forensic-investigator-tools-techniques">
+<h1>IoT Forensic Investigator Tools &amp; Techniques<a class="headerlink" href="#iot-forensic-investigator-tools-techniques" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This toolbox is incomplete and should be updated soon.</p>
 </div>
+<div class="section" id="hardware">
+<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="quick-list-of-what-you-may-need">
+<h3>Quick list of what you may need<a class="headerlink" href="#quick-list-of-what-you-may-need" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Bluetooth 4.0 USB dongle</li>
 <li>USB serial adapter (UART)</li>
 <li>Raspberry Pi</li>
 <li>ST-Link v2</li>
 <li>CC Debugger</li>
+<li>EEPROM/Flash Programmer</li>
 </ul>
+</div>
+</div>
+<div class="section" id="specific-forensic-software">
+<h2>Specific Forensic Software<a class="headerlink" href="#specific-forensic-software" title="Permalink to this headline">¶</a></h2>
+<p>We also develop <a class="reference external" href="https://github.com/digitalsecurity/hfdb.io/tree/master/tools/">specific tools</a> required to automate collection and extraction for some specific devices or file format, these tools
+are part of this project and available in our Github repository. They are usually referenced in methodologies and may be found very quickly.</p>
+</div>
+<div class="section" id="techniques">
+<h2>Techniques<a class="headerlink" href="#techniques" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="debugging-on-the-cheap">
+<h3>Debugging on the cheap<a class="headerlink" href="#debugging-on-the-cheap" title="Permalink to this headline">¶</a></h3>
+<p>Debuggers are expensive, such as TI CC Debugger or some JTAG adapters, but alternatives
+exist. They are generally based on very common hardware such as Raspberry Pis,
+Arduinos or event FT232H USB adapters.</p>
+<p>This section details these alternatives, how to build or use them, and what their
+features are.</p>
+<ul class="simple">
+<li><a class="reference internal" href="cpumcus/ti/ti_tools_techniques.html#ti-techniques-arduino-cc"><span class="std std-ref">CC Debugger Emulation using Arduino</span></a></li>
+</ul>
+</div>
+<div class="section" id="bypassing-hardware-protections-against-firmware-extraction">
+<h3>Bypassing hardware protections against firmware extraction<a class="headerlink" href="#bypassing-hardware-protections-against-firmware-extraction" title="Permalink to this headline">¶</a></h3>
+<p>Hardware protections can sometimes be bypassed with nifty tricks. This section
+details every known bypass for various SoCs, MCUs, etc.</p>
+<ul class="simple">
+<li><a class="reference internal" href="cpumcus/nordic-semi/nrf51822.html#nrf51-bypass"><span class="std std-ref">Bypassing Firmware Extraction Controls</span></a></li>
+</ul>
+</div>
+</div>
 </div>
 
 
