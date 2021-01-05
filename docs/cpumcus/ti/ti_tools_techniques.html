@@ -17,44 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../../_static/css/tablefix.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
-        <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Hardware Forensic Database 1.0 documentation" href="../../index.html"/>
-        <link rel="up" title="Texas Instruments SoCs" href="../ti.html"/>
-        <link rel="prev" title="Texas Instruments CC254x" href="cc254x.html"/> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/tablefix.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Texas Instruments CC254x" href="cc254x.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -63,7 +55,7 @@
 
           
             
-            <img src="../../_static/logo.png" class="logo" />
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -117,7 +109,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Hardware Forensic Database</a>
@@ -125,9 +117,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -189,29 +182,27 @@
 </ul>
 <p>Operation is fairly straightforward:</p>
 <ol class="arabic simple">
-<li>Download the software using <code class="code docutils literal"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/wavesoft/CCLib.git</span></code> and <code class="code docutils literal"><span class="pre">cd</span></code> into the directory.</li>
+<li>Download the software using <code class="code docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/wavesoft/CCLib.git</span></code> and <code class="code docutils literal notranslate"><span class="pre">cd</span></code> into the directory.</li>
 <li>Open the Arduino code in the Arduino IDE, choose your device, then compile and upload the firmware to the Arduino.</li>
-<li>Utilising the fritzing schematic on the github, some resistors, a breadboard, and some cables, wire up the Arduino debugger to the target. <em>NB</em> - note down your serial interface. It could be <code class="code docutils literal"><span class="pre">/dev/ttyS0</span></code> or <code class="code docutils literal"><span class="pre">/dev/ttyACM0</span></code> or similar. You will need this information.</li>
-<li>Going to the Python directory, use the <code class="code docutils literal"><span class="pre">cc_info.py</span> <span class="pre">-p</span> <span class="pre">/dev/ttyS0</span></code> to check that things are working.</li>
-<li>To read flash off the device use the command: <code class="code docutils literal"><span class="pre">./cc_read_flash.py</span> <span class="pre">-p</span> <span class="pre">/dev/ttyS0</span> <span class="pre">--out=output.hex</span></code></li>
-<li>To write flash use the following command: <code class="code docutils literal"><span class="pre">./cc_read_flash.py</span> <span class="pre">-p</span> <span class="pre">/dev/ttyS0</span> <span class="pre">--out=output.hex</span></code></li>
-<li>To let the device resume normal operations, use this command: <code class="code docutils literal"><span class="pre">./cc_resume.py</span> <span class="pre">-p</span> <span class="pre">/dev/ttyS0</span></code></li>
+<li>Utilising the fritzing schematic on the github, some resistors, a breadboard, and some cables, wire up the Arduino debugger to the target. <em>NB</em> - note down your serial interface. It could be <code class="code docutils literal notranslate"><span class="pre">/dev/ttyS0</span></code> or <code class="code docutils literal notranslate"><span class="pre">/dev/ttyACM0</span></code> or similar. You will need this information.</li>
+<li>Going to the Python directory, use the <code class="code docutils literal notranslate"><span class="pre">cc_info.py</span> <span class="pre">-p</span> <span class="pre">/dev/ttyS0</span></code> to check that things are working.</li>
+<li>To read flash off the device use the command: <code class="code docutils literal notranslate"><span class="pre">./cc_read_flash.py</span> <span class="pre">-p</span> <span class="pre">/dev/ttyS0</span> <span class="pre">--out=output.hex</span></code></li>
+<li>To write flash use the following command: <code class="code docutils literal notranslate"><span class="pre">./cc_read_flash.py</span> <span class="pre">-p</span> <span class="pre">/dev/ttyS0</span> <span class="pre">--out=output.hex</span></code></li>
+<li>To let the device resume normal operations, use this command: <code class="code docutils literal notranslate"><span class="pre">./cc_resume.py</span> <span class="pre">-p</span> <span class="pre">/dev/ttyS0</span></code></li>
 </ol>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="cc254x.html" class="btn btn-neutral" title="Texas Instruments CC254x" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="cc254x.html" class="btn btn-neutral float-left" title="Texas Instruments CC254x" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -220,7 +211,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Digital Security | CC-BY-NC-SA.
+        &copy; Copyright 2021, Digital Security | CC-BY-NC-SA
 
     </p>
   </div> 
@@ -236,36 +227,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../',
-            VERSION:'1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

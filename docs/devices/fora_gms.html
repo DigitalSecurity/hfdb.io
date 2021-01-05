@@ -17,45 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/css/tablefix.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Hardware Forensic Database 1.0 documentation" href="../index.html"/>
-        <link rel="up" title="List of supported devices" href="../devices.html"/>
-        <link rel="next" title="Sricam IP Camera" href="sricam.html"/>
-        <link rel="prev" title="List of supported devices" href="../devices.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tablefix.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sricam IP Camera" href="sricam.html" />
+    <link rel="prev" title="List of supported devices" href="../devices.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -64,7 +56,7 @@
 
           
             
-            <img src="../_static/logo.png" class="logo" />
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -119,7 +111,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Hardware Forensic Database</a>
@@ -127,9 +119,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -230,7 +223,7 @@ Accountability</td>
 <p>Use <a class="reference external" href="https://github.com/digitalsecurity/hfdb.io/devices/Fora/DiamondMini/">our dedicated tool</a> to extract valuable information.</p>
 <p>First, press the button of the Fora Diamond Mini glucose monitoring system as many times as required for the blue LED to blink.
 Then, use <em>hcitool</em> to scan the available devices and locate the Fora GMS device:</p>
-<div class="highlight-text"><div class="highlight"><pre><span></span># hcitool lescan
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># hcitool lescan
 0B:D9:5F:8C:74:36 (unknown)
 C0:26:DF:00:67:3D DIAMOND MOBILE
 C0:26:DF:00:67:3D (unknown)
@@ -238,7 +231,7 @@ C0:26:DF:00:67:3D (unknown)
 </pre></div>
 </div>
 <p>The <em>DIAMOND MOBILE</em> device shows up, note the bluetooth address and use our dedicated tool to extract the event log:</p>
-<div class="highlight-text"><div class="highlight"><pre><span></span># node diamondmini.js -t C0:26:DF:00:67:3D
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># node diamondmini.js -t C0:26:DF:00:67:3D
 Number of records: 1
 Newest record index is: 0
 
@@ -251,9 +244,7 @@ Newest record index is: 0
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -262,7 +253,7 @@ Newest record index is: 0
         <a href="sricam.html" class="btn btn-neutral float-right" title="Sricam IP Camera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../devices.html" class="btn btn-neutral" title="List of supported devices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../devices.html" class="btn btn-neutral float-left" title="List of supported devices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -271,7 +262,7 @@ Newest record index is: 0
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Digital Security | CC-BY-NC-SA.
+        &copy; Copyright 2021, Digital Security | CC-BY-NC-SA
 
     </p>
   </div> 
@@ -287,36 +278,15 @@ Newest record index is: 0
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>
