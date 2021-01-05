@@ -60,7 +60,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Hardware Forensic Database'
-copyright = '2019, Digital Security | CC-BY-NC-SA'
+copyright = '2021, Digital Security | CC-BY-NC-SA'
 author = 'Digital Security'
 
 # The version info for the project you're documenting, acts as replacement for
